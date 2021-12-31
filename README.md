@@ -10,7 +10,7 @@ I want to subtract two numbers on my calc
 
 As a mathematician
 So I can multiple numbers
-I want to multiple two numbers on my calc
+I want to multiple two numbers on my calculator
 
 As a mathematician
 So I can divide numbers

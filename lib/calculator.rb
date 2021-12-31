@@ -15,4 +15,5 @@ class Calculator
     result = num1 / num2
     result.infinite? ? 0 : result
   end
+
 end
