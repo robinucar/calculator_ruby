@@ -1,7 +1,9 @@
 require 'calculator'
 describe Calculator do
   subject(:calculator) {described_class.new}
+
   describe '#add' do
+
     it 'adds two numbers' do
       expect(subject.add(2, 3)).to eq 5
       expect(subject.add(3, 5)).to eq 8
@@ -14,7 +16,9 @@ describe Calculator do
       expect(subject.add(Float::INFINITY, Float::INFINITY)).to eq Float::INFINITY
     end
   end
+
   describe '#subtract' do
+
     it 'subtract two numbers' do
       expect(subject.subtract(5, 2)).to eq 3
       expect(subject.subtract(4, 8)).to eq -4
@@ -25,5 +29,17 @@ describe Calculator do
       expect(subject.subtract(Float::INFINITY, 0)).to eq Float::INFINITY
       expect(subject.subtract(Float::INFINITY, Float::INFINITY)).to be_nan
     end
+    describe '#multiple' do
+
+      it 'multiple two numbers' do
+        expect(subject.multiple(2, 3)).to eq 6
+        expect(subject.multiple(7, 0)).to eq 0
+        expect(subject.multiple(-5, -6 )).to eq 30
+        expect(subject.multiple(-4, 20)).to eq -80
+        expect(subject.multiple(Float::INFINITY, 0)).to be_nan
+      expect(subject.add(Float::INFINITY, Float::INFINITY)).to eq Float::INFINITY
+      end
+    end
+
   end
 end
