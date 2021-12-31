@@ -29,17 +29,31 @@ describe Calculator do
       expect(subject.subtract(Float::INFINITY, 0)).to eq Float::INFINITY
       expect(subject.subtract(Float::INFINITY, Float::INFINITY)).to be_nan
     end
-    describe '#multiple' do
-
-      it 'multiple two numbers' do
-        expect(subject.multiple(2, 3)).to eq 6
-        expect(subject.multiple(7, 0)).to eq 0
-        expect(subject.multiple(-5, -6 )).to eq 30
-        expect(subject.multiple(-4, 20)).to eq -80
-        expect(subject.multiple(Float::INFINITY, 0)).to be_nan
-        expect(subject.multiple(Float::INFINITY, Float::INFINITY)).to eq Float::INFINITY
-      end
-    end
-
   end
+  describe '#multiple' do
+
+    it 'multiple two numbers' do
+      expect(subject.multiple(2, 3)).to eq 6
+      expect(subject.multiple(7, 0)).to eq 0
+      expect(subject.multiple(-5, -6 )).to eq 30
+      expect(subject.multiple(-4, 20)).to eq -80
+      expect(subject.multiple(Float::INFINITY, 0)).to be_nan
+      expect(subject.multiple(Float::INFINITY, Float::INFINITY)).to eq Float::INFINITY
+    end
+  end
+
+  describe '#divide' do
+
+    it 'divide two numbers' do
+      expect(subject.divide(8, 2)).to eq 4
+      expect(subject.divide(13, 5)).to eq 2
+      expect(subject.divide(-12, -4)).to eq 3
+      expect(subject.divide(12, -2)).to eq -6
+      expect(subject.divide(2, 8)).to eq 0
+      expect(subject.divide(7, 20)).to eq 0
+      expect(subject.divide(Float::INFINITY, 0)).to eq 0
+      expect(subject.divide(Float::INFINITY, Float::INFINITY)).to be_nan
+    end
+  end
+
 end
