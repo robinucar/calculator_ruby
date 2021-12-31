@@ -15,5 +15,7 @@ class Calculator
     result = num1 / num2
     result.infinite? ? 0 : result
   end
-
+  def print_answer(answer)
+    "The Answer is: #{answer}"
+  end
 end
