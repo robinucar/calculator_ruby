@@ -37,7 +37,7 @@ describe Calculator do
         expect(subject.multiple(-5, -6 )).to eq 30
         expect(subject.multiple(-4, 20)).to eq -80
         expect(subject.multiple(Float::INFINITY, 0)).to be_nan
-      expect(subject.add(Float::INFINITY, Float::INFINITY)).to eq Float::INFINITY
+        expect(subject.multiple(Float::INFINITY, Float::INFINITY)).to eq Float::INFINITY
       end
     end
 
